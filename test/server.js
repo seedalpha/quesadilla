@@ -44,3 +44,19 @@ test('handle missing file', function(done) {
       done();
     });
 });
+
+test('setup http server that compresses css', function(done) {
+  server = http.createServer(quesadilla({ src: __dirname, outputStyle: 'compressed' }));
+  server.listen(done);
+});
+
+test('fetch compressed css', function(done) {
+  request(server)
+    .get('/style.css')
+    .end(function(err, res) {
+      assert.equal(res.statusCode, 200);
+      assert.equal(res.headers['content-type'], 'text/css');
+      assert.equal(res.text, '*{margin:0;padding:0}html{color:red}\n');
+      done();
+    });
+});

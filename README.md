@@ -24,6 +24,15 @@ app.use(quesadilla({
 }));
 ```
 
+quesadilla will forward options to `node-sass`, for example:
+
+```javascript
+app.use(quesadilla({
+  src: __dirname + '/style',
+  outputStyle: 'compressed'
+}));
+```
+
 ## examples
 
 See the [examples](examples) directory for working code you can copy and paste.

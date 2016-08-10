@@ -81,7 +81,11 @@ exports = module.exports = function quesadilla(options) {
       var result;
       
       try {
-        result = sass.renderSync({ file: file });
+        var params = { file: file };
+        for (var key in options) {
+          params[key] = options[key];
+        }
+        result = sass.renderSync(params);
       } catch (e) {
         
         if (!options.cache) {
