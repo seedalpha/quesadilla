@@ -1,6 +1,6 @@
 {
   "name": "quesadilla",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "middleware for automatic sass bundles",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "debug": "1.0.1",
     "filewatcher": "1.1.1",
     "mime": "1.2.11",
-    "node-sass": "^3.3.2"
+    "node-sass": "^4.5.0"
   },
   "devDependencies": {
     "mocha": "1.17.0",
