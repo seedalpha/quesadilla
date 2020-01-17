@@ -1,6 +1,6 @@
 {
-  "name": "quesadilla",
-  "version": "2.2.0",
+  "name": "@seedalpha/quesadilla",
+  "version": "2.2.10",
   "description": "middleware for automatic sass bundles",
   "main": "index.js",
   "scripts": {
